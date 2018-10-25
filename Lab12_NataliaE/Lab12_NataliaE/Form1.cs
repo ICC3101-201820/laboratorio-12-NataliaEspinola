@@ -36,15 +36,16 @@ namespace Lab12_NataliaE
         }
         public void AgregarComida(Comida comida)
         {
-            comidaList.Items.Add(comida);
+            listBox1.Items.Add(comida);
         }
 
         public void EliminarComida(Comida comida)
         {
-            comidaList.Items.Remove(comida);
+            listBox1.Items.Remove(comida);
         }
 
-        private void eliminar_Click(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
             if (OnEliminarComida != null)
             {
