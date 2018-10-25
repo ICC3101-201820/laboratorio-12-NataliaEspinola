@@ -16,7 +16,10 @@ namespace Lab12_NataliaE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Controlador controlador = new Controlador();
+            Form1 form1 = new Form1();
+            
+            Application.Run(form1);
         }
     }
 }

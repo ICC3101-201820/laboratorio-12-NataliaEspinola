@@ -38,9 +38,8 @@
             this.proteinasTextBox = new System.Windows.Forms.TextBox();
             this.grasasTextBox = new System.Windows.Forms.TextBox();
             this.Proteinas = new System.Windows.Forms.Label();
-            this.listado = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.eliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -49,7 +48,7 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(29, 12);
+            this.splitContainer1.Location = new System.Drawing.Point(51, -5);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -66,8 +65,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.eliminar);
-            this.splitContainer1.Panel2.Controls.Add(this.listado);
+            this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.listBox1);
             this.splitContainer1.Size = new System.Drawing.Size(700, 426);
             this.splitContainer1.SplitterDistance = 292;
@@ -146,39 +144,28 @@
             this.Proteinas.TabIndex = 1;
             this.Proteinas.Text = "Proteinas";
             // 
-            // listado
+            // label1
             // 
-            this.listado.AutoSize = true;
-            this.listado.Location = new System.Drawing.Point(179, 42);
-            this.listado.Name = "listado";
-            this.listado.Size = new System.Drawing.Size(41, 13);
-            this.listado.TabIndex = 1;
-            this.listado.Text = "Listado";
-            this.listado.Click += new System.EventHandler(this.listado_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(183, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(65, 58);
+            this.listBox1.Location = new System.Drawing.Point(65, 74);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(269, 251);
+            this.listBox1.Size = new System.Drawing.Size(269, 290);
             this.listBox1.TabIndex = 0;
-            // 
-            // eliminar
-            // 
-            this.eliminar.AutoSize = true;
-            this.eliminar.Location = new System.Drawing.Point(152, 325);
-            this.eliminar.Name = "eliminar";
-            this.eliminar.Size = new System.Drawing.Size(97, 23);
-            this.eliminar.TabIndex = 2;
-            this.eliminar.Text = "Eliminar Eleccion";
-            this.eliminar.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 454);
+            this.ClientSize = new System.Drawing.Size(803, 416);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -204,9 +191,8 @@
         private System.Windows.Forms.TextBox proteinasTextBox;
         private System.Windows.Forms.TextBox grasasTextBox;
         private System.Windows.Forms.Label Proteinas;
-        private System.Windows.Forms.Label listado;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button eliminar;
     }
 }
 

@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Modelo;
 
 namespace Lab12_NataliaE
 {
+    public delegate void AgregarComidaDelegate(string nombre, string proteinas, string grasas, string carbohidratos);
+    public delegate void EliminarComidaDelegate(string nombre, string proteinas, string grasas, string carbohidratos);
     public partial class Form1 : Form
     {
+        public event AgregarComidaDelegate OnAgregarComida;
+        public event EliminarComidaDelegate OnEliminarComida;
         public Form1()
         {
             InitializeComponent();
@@ -20,6 +25,31 @@ namespace Lab12_NataliaE
         private void listado_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AgregarButton_Click(object sender, EventArgs e)
+        {
+            if (OnAgregarComida != null)
+            { 
+                OnAgregarComida.Invoke(nombreTextBox.Text, proteinasTextBox.Text, grasasTextBox.Text, CarbohidratosTextBox.Text);
+            }
+        }
+        public void AgregarComida(Comida comida)
+        {
+            comidaList.Items.Add(comida);
+        }
+
+        public void EliminarComida(Comida comida)
+        {
+            comidaList.Items.Remove(comida);
+        }
+
+        private void eliminar_Click(object sender, EventArgs e)
+        {
+            if (OnEliminarComida != null)
+            {
+                OnEliminarComida.Invoke(nombreTextBox.Text, proteinasTextBox.Text, grasasTextBox.Text, CarbohidratosTextBox.Text);
+            }
         }
     }
 }
